@@ -1,6 +1,6 @@
 <template>
-  <div class="login">
-    <p>这是登录组件</p>
+  <div class="father">
+    <p>这是父组件</p>
   </div>
 </template>
 
@@ -9,6 +9,7 @@ export default {
 
 }
 </script>
+
 <style lang="less" scoped>
 
 </style>
