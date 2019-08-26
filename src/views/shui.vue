@@ -1,6 +1,6 @@
 <template>
   <div class="shui">
-    <p>这是服装分类的详细信息</p>
+    <p>这是水果分类的详细信息</p>
   </div>
 </template>
 
