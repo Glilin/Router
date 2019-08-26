@@ -2,6 +2,7 @@
   <div class="product">
   <p>这是产品</p>
   <p>{{typeinfo}}</p>
+  <input type="button" value="单击查看详情">
   </div>
 </template>
 <script>
