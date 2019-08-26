@@ -4,6 +4,7 @@ import App from './App.vue'
 // 1.引入组件 @代表src目录下的文件
 import index from '@/views/index.vue'
 import login from '@/views/login.vue'
+import product from '@/views/product.vue'
 // 2.引入路由
 import VueRouter from 'vue-router'
 // 3.使用路由
@@ -22,6 +23,12 @@ var router = new VueRouter({
             name: 'login',
             path: '/login',
             component: login
+        },
+        {
+            name: 'product',
+            // id相当于形参，它不会音响你穿什么值，但是会决定后期如何取参数
+            path: '/product/:id',
+            component: product
         }
     ]
 })
