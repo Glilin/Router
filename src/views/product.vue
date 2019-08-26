@@ -1,19 +1,32 @@
 <template>
   <div class="product">
   <p>这是产品</p>
+  <p>{{typeinfo}}</p>
   </div>
 </template>
 <script>
 export default {
+  data () {
+    return {
+      typeinfo: ''
+    }
+  },
   // 普通监听用函数来处理
   watch: {
-    // watch 监听是响应同一路由参数的变化
+    // watch监听是响应同一路由参数的变化
     $route (to, from) {
       // 对路由变化作出响应
       // console.log(to)
       // console.log(from)
       var id = to.params.id
       console.log(id)
+      if (id === '1') {
+        this.typeinfo = '这是水果分类的信息'
+      } else if (id === '2') {
+        this.typeinfo = '这是电器分类的信息'
+      } else if (id === '3') {
+        this.typeinfo = '这是服装分类的信息'
+      }
     }
   },
   // mounted钩子函数是响应路由的变化
@@ -23,6 +36,13 @@ export default {
   //  console.log(this.$route)
    var id = this.$route.params.id
    console.log(id)
+   if (id === '1') {
+     this.typeinfo = '这是水果分类的信息'
+   } else if (id === '2') {
+     this.typeinfo = '这是电器分类的信息'
+   } else if (id === '3') {
+     this.typeinfo = '这是服装分类的信息'
+   }
   }
 }
 </script>
