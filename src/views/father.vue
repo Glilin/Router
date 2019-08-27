@@ -1,12 +1,11 @@
 <template>
   <div class="father">
-    <p>这是父组件</p>
+    <p>这是父组件123123</p>
   </div>
 </template>
 
 <script>
 export default {
-
 }
 </script>
 
