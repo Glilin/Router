@@ -25,7 +25,7 @@ var router = new VueRouter({
         {
             name: 'default',
             path: '/',
-            redirect: { name: 'product' }
+            redirect: { name: 'father' }
         },
         // 6.配置路由单击对象：路由映射组件
         {

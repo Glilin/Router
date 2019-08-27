@@ -4,11 +4,6 @@ import App from './App.vue'
 // 1.引入组件
 import router from '@/router/index.js'
 
-// 2.引入路由
-import VueRouter from 'vue-router'
-// 3.使用路由
-Vue.use(VueRouter)
-
 Vue.config.productionTip = false
 
 new Vue({
