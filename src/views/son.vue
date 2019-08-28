@@ -1,23 +1,27 @@
 <template>
   <div class="son">
-    <p>这是子组件</p>
-    <p>我的父亲给我取名字：{{myname}}</p>
+    <p>这是子组件:{{name}}</p>
+    <!-- : 是 v-bind 简写  @ 是 v-on的简写 -->
+  <input type="button" :value="'点击我告诉你'+myname" @click="tellname">
   </div>
 </template>
 
 <script>
 export default {
-  // props：允许外部进行赋值，使用的时候就和data中定义的成员一样使用
-  // props可以是数组，也可以是对象
-  props: ['myname'],
   data () {
     return {
-    //  myname:'??'
+      name: '子组件-小jack',
+      myname: '小红'
+    }
+  },
+  methods: {
+    tellname () {
+      // 发射事件:通过this.$emit(事件名称，需要传递的数据)
+      this.$emit('getname', this.myname)
     }
   }
-
 }
 </script>
 
-<style lang="">
+<style lang="less" scoped>
 </style>
