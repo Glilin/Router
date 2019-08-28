@@ -1,24 +1,27 @@
 <template>
+<!--  3. 在另一个兄弟组件中通过事件总线$on来监听事件，进行事件的处理 -->
   <div class="son">
-    <p>这是子组件:{{name}}</p>
-    <!-- : 是 v-bind 简写  @ 是 v-on的简写 -->
-  <input type="button" :value="'点击我告诉你'+myname" @click="tellname">
+    <p>这是儿子组件:{{name}}</p>
+    <p>我妹妹的男友有叫：{{ xiaojiuzi}}</p>
   </div>
 </template>
 
 <script>
+import myemit from '@/utils/event.js'
 export default {
   data () {
     return {
       name: '子组件-小jack',
-      myname: '小红'
+      xiaojiuzi: '？？'
     }
   },
-  methods: {
-    tellname () {
-      // 发射事件:通过this.$emit(事件名称，需要传递的数据)
-      this.$emit('getname', this.myname)
-    }
+  // 一开始就进行事件的监听
+  mounted () {
+    // myemit.$on('事件名称','事件处理函数')
+    myemit.$on('getname', (data) => {
+      console.log(data)
+      this.xiaojiuzi = data.name
+    })
   }
 }
 </script>
